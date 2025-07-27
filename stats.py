@@ -3,18 +3,14 @@ def get_book_text(path_to_file):
         book_content = f.read()
         characters = count_characters(book_content)
 
-        # Returned a list of tuples
         number_of_words = count_words(book_content)
-        sorted_items = sorted(characters.items(), key=sort_on, reverse=True)
-        # sorted_items = dict(sorted(characters.items(), key=sort_on, reverse=True))
+        sorted_items = dict(sorted(characters.items(), key=sort_on, reverse=True))
+
         print(f"Found a total of {number_of_words} in your file ({path_to_file}).")
         print(sorted_items)
-        # count_words(f.read())
 
 
 def count_words(string):
-    # print(f"{len(string.split()} words found in the document")
-    # return f"{len(string.split())} words found in the document"
     return f"{len(string.split())} words"
 
 
